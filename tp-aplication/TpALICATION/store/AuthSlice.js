@@ -1,5 +1,5 @@
-// import AsyncStorage from "@react-native-async-storage/async-storage";
-// import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import { SIGN_IN_URL, SIGN_UP_URL } from "../configueFireBase/configue";
 
 
@@ -50,28 +50,28 @@
 // }
 // )
 
-// const authSlice = createSlice({
+const authSlice = createSlice({
    
-//     name: "auth",
-//   initialState: {
-//       islogged : false,
-//       user: null,
-//       isLoading: false,
-//       error: null
-//     },
-//     reducers: {
-//         setUser(state, action) {
-//             state.user = action.payload
-//             AsyncStorage.setItem('token', action.payload.idToken)
-//         },
-//         removeUser(state) {
+    name: "auth",
+  initialState: {
+      islogged : false,
+      user: null,
+      isLoading: false,
+      error: null
+    },
+    reducers: {
+        setUser(state, action) {
+            state.user = action.payload
+            AsyncStorage.setItem('token', action.payload.idToken)
+        },
+        removeUser(state) {
            
-//             state.user = null
-//             AsyncStorage.removeItem('token')
-//             state.islogged = false
+            state.user = null
+            AsyncStorage.removeItem('token')
+            state.islogged = false
             
-//         }
-//     },
+        }
+    },
 //     extraReducers: (builder) => {
 //         /*
 //         Pour chaque action, il est possible de se brancher sur trois versions de l'action: 
@@ -113,8 +113,8 @@
 //       state.error = action.payload
 //     })
 //   }
-// })
+})
 
-// export const { setUser, removeUser } = authSlice.actions
+export const { setUser, removeUser } = authSlice.actions
 
-// export default authSlice.reducer
+export default authSlice.reducer

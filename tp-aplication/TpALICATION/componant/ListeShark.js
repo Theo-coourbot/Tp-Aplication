@@ -4,7 +4,7 @@ import { MySharkList } from './data.js/sharks'
 import SharkDescrption from './Shark'
 
 
-export default function listeShark() {
+export default function ListeShark() {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>liste de nos membres</Text>
